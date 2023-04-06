@@ -1,0 +1,169 @@
+/* Single Screen */
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* CSS Variables */
+
+:root {
+  --theme-colour-primary: rgb(33, 28, 55);
+  --theme-colour-secondary: rgb(18, 18, 28);
+  --font-color: rgb(147, 140, 140);
+  --font-color-hover: white;
+}
+/* aside-1 */
+.aside-1 {
+  display: inline-block;
+  color: wheat;
+  padding: 0rem 2rem;
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.album-single-screen-facts {
+  max-height: 65%;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.album-single-screen-facts .album-image-box {
+  min-width: 30%;
+  max-height: 100%;
+  flex-shrink: 2;
+  align-self: start;
+  margin-top: 0.5rem;
+}
+.album-single-screen-facts .album-image-box img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.album-single-screen-facts .aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.5rem;
+  max-height: 100%;
+  padding: 3% 1%;
+}
+
+.album-single-screen-facts .aside .header {
+}
+
+.album-single-screen-facts .aside .header .followers {
+  float: right;
+  margin-right: 1%;
+  display: inline;
+  font-size: x-small;
+}
+.album-single-screen-facts .aside .header p {
+  font-size: x-small;
+}
+
+.album-single-screen-facts .aside .aside-desc {
+  font-size: 0.95vw;
+}
+.album-single-screen-facts .aside .footer {
+  display: flex;
+  align-items: center;
+  min-height: 10%;
+}
+
+.footer .play-all {
+  flex-basis: 40%;
+  text-align: center;
+  font-size: small;
+}
+.footer p {
+  font-size: 0.7rem;
+}
+
+.footer .play-all .button {
+  margin: 0%;
+  margin: 0% 20%;
+  background-image: linear-gradient(
+    to right,
+    #4a4b4a 0%,
+    #d9d9d3 51%,
+    #505351 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 2px #eee;
+  display: block;
+}
+
+.footer .play-all .button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .play-all .release-count {
+  font-size: xx-small;
+}
+
+/* Panel */
+.playlist-panel {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.playlist-panel-song {
+  max-height: 40%;
+  display: flex;
+  color: var(--font-color);
+  font-size: x-small;
+  gap: 1rem;
+  align-items: center;
+}
+.playlist-panel-song-image-box {
+  max-width: 15%;
+  align-self: stretch;
+  position: relative;
+}
+
+.playlist-panel-song-image-box i {
+  display: none;
+}
+
+.playlist-panel-song:hover {
+  color: var(--font-color-hover);
+}
+.playlist-panel-song:hover .playlist-panel-song-image-box {
+  padding: 0.2%;
+  opacity: 0.5;
+}
+.playlist-panel-song:hover .playlist-panel-song-image-box i {
+  display: inline;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  color: white;
+}
+.playlist-panel-song-image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.playlist-panel-song .icons {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.playlist-panel-song .icons i {
+  transform: scale(1.5);
+}

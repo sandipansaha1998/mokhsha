@@ -1,0 +1,180 @@
+/* CSS Variables */
+
+/* tablets*/
+@media only screen and (min-width: 568px) and (max-width: 700px) {
+  main {
+    height: 100%;
+  }
+  .album-single-screen-facts {
+    max-height: 40%;
+  }
+  .album-single-screen-facts .album-image-box {
+    min-width: 50%;
+    max-height: 100%;
+    margin: auto;
+  }
+  .album-single-screen-facts .aside .aside-desc {
+    font-size: 1vw;
+  }
+  .album-single-screen-facts .aside .footer {
+    display: flex;
+    align-items: center;
+    max-height: 10%;
+  }
+  .footer .play-all {
+    flex-basis: 60%;
+    text-align: center;
+    font-size: x-small;
+  }
+  .footer .follow {
+    font-size: xx-small;
+    align-self: flex-end;
+    margin-bottom: auto;
+  }
+}
+
+/* Mobiles */
+@media only screen and (max-width: 567px) {
+  /* To properly accomodate both main and player */
+  main {
+    height: 80%;
+    position: relative;
+  }
+  .carousel {
+    display: none;
+  }
+  /* Icon for aside queue  */
+  .navbar #queue-hamburger {
+    display: inline;
+  }
+
+  /* Changing it to full screen  */
+  .aside-1 {
+    width: 100%;
+  }
+
+  /* Hiding the aside queue */
+  .aside-2 {
+    display: none;
+  }
+  .aside-2:target {
+    display: inline-block;
+    position: absolute;
+    left: 1%;
+    width: 98%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+    background-color: var(--theme-colour-primary);
+  }
+
+  .playlist .song-image {
+    flex-basis: 6%;
+  }
+
+  .heading-button-combo i {
+    display: inline;
+  }
+
+  /* Carousel */
+  .carousel {
+    margin-bottom: 1rem;
+  }
+
+  /* Mostly Played */
+  .flex-section .flex-item {
+    flex-basis: 45%;
+    position: relative;
+  }
+  .flex-section .item-image {
+    min-width: 30%;
+  }
+  /* Artist */
+
+  .artist {
+    width: 20vw;
+    height: 15vw;
+  }
+
+  /* Genre */
+
+  .genre-item {
+    width: 25vw;
+    height: 16vw;
+  }
+
+  .genre-item:hover span {
+    font-size: small;
+  }
+
+  /* Music Player */
+  /* Increasing the width of player-toolbar */
+  .player .player-toolbar {
+    flex-basis: 75%;
+    justify-content: space-around;
+  }
+
+  /* Hiding the sound-control icons */
+  .sound-control i {
+    display: none;
+  }
+  .sound-control .share {
+    display: inline;
+    transform: scale(0.8);
+    padding: 5%;
+  }
+  #sound-slider {
+    display: none;
+  }
+
+  /* Aside-1 for the mobilescreens */
+
+  .album-single-screen-facts {
+    margin: auto;
+    margin-top: 0%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-height: 100%;
+  }
+
+  .album-single-screen-facts .album-image-box {
+    align-self: center;
+    min-height: 100%;
+    height: 60%;
+    overflow: hidden;
+  }
+
+  .album-single-screen-facts .aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    max-height: 60%;
+    padding: 3% 1%;
+  }
+  .album-single-screen-facts .aside .header {
+  }
+
+  .album-single-screen-facts .aside .aside-desc {
+    font-size: 2vw;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer .play-all .button {
+    margin: 0% 1%;
+  }
+
+  .footer .play-all {
+    flex-basis: 60%;
+    text-align: center;
+    font-size: x-small;
+  }
+  .footer .follow {
+    font-size: xx-small;
+    align-self: flex-end;
+    margin-bottom: auto;
+  }
+}

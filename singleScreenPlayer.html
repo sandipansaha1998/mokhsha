@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moksha-Pink Floyd</title>
+    <link rel="icon" type="image/x-icon" href="files/images/favicon.jpeg">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google API font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+
+    <!-- External Stylesheets -->
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="singlePlayer.css">
+    <link rel="stylesheet" href="reponsive.css">
+</head>
+<!-- Navigation bar -->
+<!-- Navigation bar was divided into two conatiners -->
+<nav class="navbar">
+
+    <!-- (1) Navigation Left -->
+
+    <!-- Conatiner has Brand name , Logo and Favorites -->
+
+    <!-- Responsiveness added using Bootstrap.
+        For SM onwards the width was reduced to 6 cols -->
+    <div class="navbar-left   col-8 col-sm-6   ">
+        <a class="navbar-brand  ">
+            <!-- Logo -->
+            <img src="files/images/favicon.jpeg" class="me-1">
+            Mokhsa
+        </a>
+        <!-- Favorites -->
+        <a class="favorites ms-4 primary-font">Favorites</a>
+    </div>
+
+    <!-- (2) Navigation Right -->
+    <!-- This container has search bar , notification bell , Profile details, hamburger menu  -->
+
+
+    <div
+        class="navbar-right  col-4 col-sm-6   mt-2 d-flex flex-row justify-content-around justify-content-sm-end gap-3 ">
+
+
+        <!-- Search-Bar -->
+        <!-- Hidden in xs -->
+        <!-- Long Search bar with input form of text to search within the screen -->
+        <div class="search-bar rounded-pill d-none d-sm-inline-block">
+            <i class="fa-solid fa-magnifying-glass fa-xs  d-inline "></i>
+            <input id="search-bar-form" class="form-control rounded-pill d-inline p-1 " type="search" value="search">
+            <i class="fa-solid fa-microphone fa-xs me-1"></i>
+
+        </div>
+
+        <!-- Search Button for xs -->
+        <!-- On clicking the search icon should redirect to search page -->
+        <a id="search-tag" class="primary-font  d-inline d-sm-none "> <i class="fa-solid fa-magnifying-glass "></i>
+        </a>
+        <!-- Notification Bell -->
+        <a class="d-sm-inline  "><i class="fa-regular fa-bell primary-font fa-lg "></i></a>
+
+        <!-- Profile Button -->
+        <div class="profile-pic ms-sm-0">
+            <img src="files/images/profilePicture.jpg" alt="">
+        </div>
+
+        <!-- Hamburger-menu for mobiles -->
+
+        <a href="#queue" id="queue-hamburger"><i class="fa-solid fa-bars "></i></a>
+    </div>
+</nav>
+
+<!-- End of Navigation -->
+
+
+<!-- Main -->
+<!-- Main section was divided as:
+                    - aside-1(left half panel)
+                    - aside-2(Right half queue)
+                -->
+<main>
+    <section class="aside-1   ">
+
+        <!-- The aside section was divided into two vertical blocks
+            --album-single-screen-facts
+                -album-image-box (image of the band)
+                -aside -->
+        <div class="album-single-screen-facts  ">
+            <div class="album-image-box   ">
+                <img src="files/single/cover.jpeg" alt="">
+            </div>
+            <div class="aside">
+                <div class="header">
+                    Pink Floyd
+                    <div class="followers">15k followers</div>
+                    <p>English Band</p>
+                </div>
+                <div class="aside-desc">
+                    Pink Floyd are an English rock band formed in London in 1965. Gaining an early following as one of
+                    the
+                    first British psychedelic groups, they were distinguished by their extended compositions, sonic
+                    experimentation, philosophical lyrics and elaborate live shows. They became a leading band of the
+                    progressive rock genre, cited by some as the greatest progressive rock band of all time.
+                </div>
+                <div class="footer  ">
+                    <div class="play-all">
+                        <div class="button ">Play All</div>
+                        <div class="release-count ">247 tracks|148 albums</div>
+                    </div>
+                    <p class="follow">Follow</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="playlist-panel  ">
+            <div class="playlist-panel-song ">
+                01
+                <div class="playlist-panel-song-image-box  ">
+                    <i class="fa-solid fa-play fa-lg "></i>
+                    <img src="files/single/highHopes.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> High Hopes</div>
+                    <p>The Division Bell</p>
+                </div>
+                <div class="icons  ">
+                    <i class="fa-solid fa-plus primary-font"></i>
+                    <i class="fa-regular fa-heart  primary-font "></i>
+                </div>
+            </div>
+            <div class="playlist-panel-song ">
+                02
+                <div class="playlist-panel-song-image-box  ">
+                    <i class="fa-solid fa-play fa-lg "></i>
+                    <img src="files/single/shineOnYou.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Wish you were here </div>
+                    <p>Wish You were here</p>
+                </div>
+                <div class="icons  ">
+                    <i class="fa-solid fa-plus primary-font"></i>
+                    <i class="fa-regular fa-heart  primary-font "></i>
+                </div>
+            </div>
+            <div class="playlist-panel-song ">
+                03
+                <div class="playlist-panel-song-image-box  ">
+                    <i class="fa-solid fa-play fa-lg "></i>
+                    <img src="files/single/theWall.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Comfortably Numb</div>
+                    <p>The Wall</p>
+                </div>
+                <div class="icons  ">
+                    <i class="fa-solid fa-plus primary-font"></i>
+                    <i class="fa-regular fa-heart  primary-font "></i>
+                </div>
+            </div>
+            <div class="playlist-panel-song ">
+                04
+                <div class="playlist-panel-song-image-box  ">
+                    <i class="fa-solid fa-play fa-lg "></i>
+                    <img src="files/single/highHopes.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> High Hopes</div>
+                    <p>The Division Bell</p>
+                </div>
+                <div class="icons  ">
+                    <i class="fa-solid fa-plus primary-font"></i>
+                    <i class="fa-regular fa-heart  primary-font "></i>
+                </div>
+            </div>
+            <div class="playlist-panel-song ">
+                05
+                <div class="playlist-panel-song-image-box  ">
+                    <i class="fa-solid fa-play fa-lg "></i>
+                    <img src="files/single/shineOnYou.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Wish you were here </div>
+                    <p>Wish You were here</p>
+                </div>
+                <div class="icons  ">
+                    <i class="fa-solid fa-plus primary-font"></i>
+                    <i class="fa-regular fa-heart  primary-font "></i>
+                </div>
+            </div>
+            <div class="playlist-panel-song ">
+                06
+                <div class="playlist-panel-song-image-box  ">
+                    <i class="fa-solid fa-play fa-lg "></i>
+                    <img src="files/single/theWall.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Comfortably Numb</div>
+                    <p>The Wall</p>
+                </div>
+                <div class="icons  ">
+                    <i class="fa-solid fa-plus primary-font"></i>
+                    <i class="fa-regular fa-heart  primary-font "></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Aside-2 Queue -->
+    <aside id="queue" class="aside-2  ">
+        <div class="heading-button-combo primary-font   ">
+            Queue
+            <a href="#"><i class="fa-solid fa-xmark float-end"></i></a>
+        </div>
+        <!-- 
+        The Playlist is a flex container.
+                -song-image
+                   -play-button
+                   -img
+                -songe-desc
+                   -name
+                   -p(Singer)
+                -heart -->
+
+        <div id="queue" class="playlist ">
+            <div class="song">
+                01
+
+                <div class="song-image "><i class="fa-solid fa-play fa-lg "></i>
+                    <img src="files/songs/anuv.jpg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Alag Asman</div>
+                    <p>Anuv Jain</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                02
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/mohiner.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Bhalo Lagey</div>
+                    <p>Mohiner Ghoraguli</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                03
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/fossils.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Fossils IV </div>
+                    <p>Fossils</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                04
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/time.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Time</div>
+                    <p>Pink Floyd</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                05
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/anuv.jpg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Alag Asman</div>
+                    <p>Anuv Jain</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                06
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/mohiner.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Bhalo Lagey</div>
+                    <p>Mohiner Ghoraguli</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                07
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/fossils.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Fossils IV </div>
+                    <p>Fossils</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                08
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/time.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Time</div>
+                    <p>Pink Floyd</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                09
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/anuv.jpg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Alag Asman</div>
+                    <p>Anuv Jain</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                10
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/mohiner.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Bhalo Lagey</div>
+                    <p>Mohiner Ghoraguli</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                11
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/fossils.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Fossils IV </div>
+                    <p>Fossils</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                12
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/time.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Time</div>
+                    <p>Pink Floyd</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                13
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/anuv.jpg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Alag Asman</div>
+                    <p>Anuv Jain</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                14
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/mohiner.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Bhalo Lagey</div>
+                    <p>Mohiner Ghoraguli</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                15
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/fossils.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Fossils IV </div>
+                    <p>Fossils</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                16
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/time.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Time</div>
+                    <p>Pink Floyd</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                17
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/anuv.jpg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Alag Asman</div>
+                    <p>Anuv Jain</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                18
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/mohiner.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Bhalo Lagey</div>
+                    <p>Mohiner Ghoraguli</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                19
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/fossils.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Fossils IV </div>
+                    <p>Fossils</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+
+            <div class="song ">
+                20
+                <div class="song-image  "><i class="fa-solid fa-play fa-lg "></i><img src="files/songs/time.jpeg">
+                </div>
+                <div class="song-desc  ">
+                    <div class="name "> Time</div>
+                    <p>Pink Floyd</p>
+                </div>
+                <div class="heart "><i class="fa-regular fa-heart primary-font "></i></div>
+            </div>
+        </div>
+    </aside>
+</main>
+
+<!-- Music Player -->
+<div class="player  ">
+    <div class="current-song ">
+        <img src="files/songs/john.jpeg">
+        <div class="current-desc  ">
+            <div class="current-name"> Imagine</div>
+            <p>John Lenon</p>
+        </div>
+        <i class="fa-solid fa-heart heart"></i>
+    </div>
+
+    <div class="player-toolbar  ">
+        <div class="toolbar">
+            <div class="icon "> <i class="fa-solid  fa-shuffle"></i></div>
+            <div class="icon"> <i class="fa-solid fa-backward-step"></i></div>
+            <div class="icon"> <i class="fa-regular fa-circle-pause"></i></div>
+            <div class="icon"> <i class="fa-solid fa-forward-step"></i></div>
+            <div class="icon"> <i class="fa-solid fa-repeat"></i></div>
+
+        </div>
+        <div class="play-status ">
+            <input type="range" min="1" max="100" value="50" class="slider ">
+        </div>
+
+    </div>
+
+    <div id="sound" class="sound-control  ">
+        <i class="fa-solid fa-share me-1 primary-font share"></i>
+        <i class="fa-solid fa-volume-high primary-font  "></i>
+        <input type="range" min="1" max="100" value="50" class="slider " id="sound-slider">
+        <i class="fa-solid fa-down-left-and-up-right-to-center primary-font"></i>
+
+    </div>
+
+</div>
+
+</body>
+<script src="https://kit.fontawesome.com/5d0265ed42.js" crossorigin="anonymous"></script>
+
+</html>
